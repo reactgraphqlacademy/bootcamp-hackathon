@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash.debounce": "^4.0.8",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -16,6 +17,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "surge ./build --domain https://rjsa-star-wars.surge.sh"
+  },
+  "devDependencies": {
+    "jest-dom": "^1.12.0",
+    "react-testing-library": "^5.0.0"
   }
 }

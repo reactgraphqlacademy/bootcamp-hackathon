@@ -1,13 +1,17 @@
 import React from "react";
-import { Heading as BaseHeading } from "rebass";
-import { Logo } from "./index";
+import { Box, Heading as BaseHeading } from "rebass";
 
 function Heading(props) {
   return (
-    <div>
-      <Logo width={200} />
-      <BaseHeading {...props}>{props.children}</BaseHeading>
-    </div>
+    <Box>
+      <BaseHeading
+        {...props}
+        my={3}
+        textAlign={props.align ? props.align : "center"}
+      >
+        {props.children}
+      </BaseHeading>
+    </Box>
   );
 }
 
