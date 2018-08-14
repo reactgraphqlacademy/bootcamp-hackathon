@@ -1,5 +1,5 @@
 import React from "react";
-import { fetchCharacters, searchByQuery } from "../utils/api";
+import { fetchCharacters, searchByQuery, fetchNextPage } from "../utils/api";
 import { CharactersList, Heading } from "../components";
 import { Input, Text } from "rebass";
 import debounce from "lodash.debounce";
@@ -8,6 +8,7 @@ function Search(props) {
   return (
     <Input
       my={4}
+      style={{ padding: "8px 16px" }}
       type="search"
       placeholder="search"
       value={props.searchTerm}
@@ -23,8 +24,8 @@ class Home extends React.Component {
       count: null,
       next: ""
     },
-    count: null,
     loading: true,
+    loadingMore: false,
     searchTerm: ""
   };
 
@@ -48,6 +49,21 @@ class Home extends React.Component {
     searchByQuery(text).then(this.updateState);
   };
 
+  handleNextPage = () => {
+    this.setState({ loadingMore: true });
+    fetchNextPage(this.state.data.next).then(res => {
+      this.setState(prevState => ({
+        loadingMore: false,
+        data: {
+          loading: false,
+          characters: [...prevState.data.characters, ...res.results],
+          count: res.count,
+          next: res.next
+        }
+      }));
+    });
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -59,7 +75,11 @@ class Home extends React.Component {
         {this.state.loading ? (
           <Text>Loading...</Text>
         ) : this.state.data.count > 0 ? (
-          <CharactersList characters={this.state.data.characters} />
+          <CharactersList
+            characters={this.state.data.characters}
+            handleNextPage={this.state.data.next ? this.handleNextPage : null}
+            loadingMore={this.state.loadingMore}
+          />
         ) : (
           <Text>No results :(</Text>
         )}

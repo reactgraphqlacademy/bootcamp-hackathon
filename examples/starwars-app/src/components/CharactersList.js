@@ -8,7 +8,8 @@ import {
   Card as BaseCard,
   Subhead as BaseSubhead,
   Small,
-  BackgroundImage
+  BackgroundImage,
+  ButtonOutline
 } from "rebass";
 
 const Subhead = styled(BaseSubhead)`
@@ -38,13 +39,27 @@ function CharacterItem({ character, history }) {
 
 const Character = withRouter(CharacterItem);
 
-function CharactersList({ characters }) {
+function CharactersList({ characters, handleNextPage, loadingMore }) {
   return (
-    <Flex mx={-2} flexWrap="wrap">
-      {characters.map((character, i) => {
-        return <Character key={i} character={character} />;
-      })}
-    </Flex>
+    <Box>
+      <Flex mx={-2} flexWrap="wrap">
+        {characters.map((character, i) => {
+          return <Character key={i} character={character} />;
+        })}
+      </Flex>
+      {handleNextPage ? (
+        <ButtonOutline
+          css={{
+            width: "100%"
+          }}
+          p={3}
+          my={3}
+          onClick={handleNextPage}
+          children={loadingMore ? "loading..." : "More"}
+          disabled={loadingMore}
+        />
+      ) : null}
+    </Box>
   );
 }
 
