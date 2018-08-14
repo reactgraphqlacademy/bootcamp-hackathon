@@ -19,3 +19,7 @@ export function searchByQuery(q) {
     res.json()
   );
 }
+
+export function fetchNextPage(url) {
+  return fetch(url).then(res => res.json());
+}

@@ -46,7 +46,6 @@ class Character extends React.Component {
       return <p>Loading...</p>;
     } else {
       let { character } = this.state;
-      console.log(character);
       let id = parseIDFromURL(character.url);
       return (
         <React.Fragment>

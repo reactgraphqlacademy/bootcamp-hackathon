@@ -2,7 +2,6 @@ import React from "react";
 import { Panel, Flex, Box, BackgroundImage, Text } from "rebass";
 
 function DataSection({ dataKey, data }) {
-  console.log(dataKey, data);
   return (
     <Panel mb={4}>
       <Panel.Header
