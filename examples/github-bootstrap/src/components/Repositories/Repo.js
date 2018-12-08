@@ -1,7 +1,14 @@
 import React from "react";
+import { Panel, Box, Subhead } from "rebass";
 
 function Repo({ repo }) {
-  return <p>{JSON.stringify(repo, null, 2)}</p>;
+  return (
+    <Panel>
+      <Box p={3}>
+        <Subhead>{repo.name}</Subhead>
+      </Box>
+    </Panel>
+  );
 }
 
 export default Repo;

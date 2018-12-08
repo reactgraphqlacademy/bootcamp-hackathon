@@ -1,13 +1,11 @@
 # ReactJS Academy Hackathon
 
-TODO: Instructions + links to examples
-
 ## hackathon ideas
 
-- autocomplete search app with star wars api
-- weather app that shows 4 cities forecast
-- Github search repositories and star them
-- CV app with Gatsby
+- autocomplete search app with star wars api by [@horacioh]()
+- weather app that shows 4 cities forecast by [@horacioh]()
+- Github search repositories and star them by [@horacioh]()
+- CV app with Gatsby by you?
 
 ---
 
