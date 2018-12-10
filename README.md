@@ -5,6 +5,7 @@
 - autocomplete search app with star wars api by [@horacioh](https://github.com/horacioh)
 - weather app that shows 4 cities forecast by [@horacioh](https://github.com/horacioh)
 - Github search repositories and star them by [@horacioh](https://github.com/horacioh)
+- [Product Hunt clone](https://github.com/flexbox/100things) with Netlify for Hosting and Prisma for GraphQL API by [@flexbox](https://github.com/flexbox)
 - CV app with [Gatsby](https://www.gatsbyjs.org/) by you?
 
 ---
