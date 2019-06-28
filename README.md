@@ -16,7 +16,7 @@
 - create a Github token: https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
 - apollo client documentation:https://www.apollographql.com/docs/react/essentials/get-started.html
 - SWAPI GraphQL API (maybe a good try to change the app to use this API?): https://graphql.org/swapi-graphql/
-- rebass UI Library Documentation: http://jxnblk.com/rebass/getting-started
+- rebass UI Library Documentation: https://rebassjs.org/getting-started
 - create an Unsplash App to get your tokens (need an account to get this): https://unsplash.com/oauth/applications/new
 - Gatsby docs tutorial: https://www.gatsbyjs.org/tutorial/
 - Build a REST Mock API: https://www.mockable.io/
