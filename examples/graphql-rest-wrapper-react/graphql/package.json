@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.1.0",
+    "apollo-server": "^2.14.2",
     "graphql-yoga": "^1.16.2",
     "node-fetch": "^2.2.0"
   }
